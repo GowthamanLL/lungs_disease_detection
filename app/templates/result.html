@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- myapp/templates/prediction.html -->
+<!-- myapp/templates/prediction.html -->
+<h1>Prediction Result:</h1>
+{% if result == "normal" %}
+<center><img src="{% static 'normal.png' %}" alt="Uploaded Image"></center>
+{% else %}
+<center><img src="{% static 'unhealthy.jpg' %}" alt="Uploaded Image"></center>
+{% endif %}
+
+<p>{{ result }}</p>
+
+
+</body>
+</html>
